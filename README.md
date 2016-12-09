@@ -100,7 +100,7 @@ $ sudo apachectl restart
 
 ３. Apacheのダウンロードとインストール
 
-* [Apacheの公式サイト](http://httpd.apache.org/)からダウンロードを行います。
+* [Apacheの公式サイト](http://httpd.apache.org/)からダウンロードします。
 
 * 「Apache httpd 2.4.23 Released」のブロックにある「Download」をクリック ->「Files for Microsoft Windows」リンクをクリック ->
   「Apache Lounge」リンクをクリック -> Apache 2.4.23 Win64 -> httpd-2.4.23-win64-VC14.zip をクリックしてダウンロードします。
@@ -132,8 +132,8 @@ $ sudo apachectl restart
 
 ５. Apache + PHPの設定と動作確認
 
-* Apacheのhttpd.conf設定する。
- * C:\Apache24\conf\httpd.confファイルの末尾に記述（追加）します。
+* Apacheのhttpd.confを編集する。
+ * C:\Apache24\conf\httpd.confファイルの末尾にphpの記述（追加）します。
  ```text
     LoadModule php5_module "C:/php/php5apache2_4.dll"
     PHPIniDir "C:/php"
