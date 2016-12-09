@@ -86,7 +86,7 @@ PHPとApacheをひとつずつインストールする方法です。
  * 日本語利用のためのマルチバイト設定 : mbstring.language = Japanese , mbstring.internal_encoding = UTF-8
  * OpenSSLが有効の設定(**重要**) : extension=php_openssl.dll (`;`を削除します）
 
-2. PHPの設定と動作確認
+1. PHPの設定と動作確認
 
 * 環境変数の設定
  * システム環境変数から変数「Path」を選択しシステム変数の編集です。変数値の末尾に「;C:\php」を追加し、「OK」をクリックします。
@@ -95,10 +95,10 @@ PHPとApacheをひとつずつインストールする方法です。
  * コマンドプロンプトを起動し、オプション（-v）をつけて、phpのバージョンを確認します。
  ```text
 　　C:\>php -v
-      PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
+            PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
 ```
 
-3. Apacheのダウンロードとインストール
+1. Apacheのダウンロードとインストール
 
 * [Apacheの公式サイト](http://httpd.apache.org/)からダウンロードを行います。
 
@@ -113,10 +113,9 @@ PHPとApacheをひとつずつインストールする方法です。
 
 * 実行ファイル（httpd.exe）を実行し、Apache24をサービスへインストールします。
  ```text
-　　C:\>cd C:\Apache24\bin
 　　C:\Apache24\bin>httpd.exe -k install
 ```
-4. Apacheの動作確認
+1. Apacheの動作確認
 
 * Apache24のbinフォルダ（C:\Apache24\bin）に移動し、「ApacheMonitor.exe」をダブルクリックします。
 
@@ -126,11 +125,11 @@ PHPとApacheをひとつずつインストールする方法です。
 
 * ブラウザを起動し、http://localhost/にアクセスします。
 
-* 「It works!」というメッセージが表示されればOKです。(C:\Apache24\htdocs\index.htmlの内容を表示)
+* 「It works!」というメッセージが表示されればOKです。(C:\Apache24\htdocs\index.htmlの内容です)
 
 * これでApacheの動作確認は完了です。
 
-5. Apache + PHPの設定と動作確認
+1. Apache + PHPの設定と動作確認
 
 * Apacheのhttpd.conf設定する。
  * C:\Apache24\conf\httpd.confファイルの末尾に記述（追加）します。
@@ -146,7 +145,7 @@ PHPとApacheをひとつずつインストールする方法です。
     C:\Apache24\bin>httpd.exe -k restart
 ```
 
- * ApacheMonitorからは「Start」をクリックします。
+ * ApacheMonitorからの場合は「Start」をクリックします。
 
 * ApacheのDocumentRootフォルダ「C:\Apache24\htdocs」にphpinfo.phpというファイルを作成し、以下のように編集します。
  ```php
