@@ -96,7 +96,7 @@ $ sudo apachectl restart
  * コマンドプロンプトを起動し、オプション（-v）をつけて、phpのバージョンを確認します。
  ```text
 　　C:\>php -v
-           PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
+            PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
 ```
 
 ３. Apacheのダウンロードとインストール
@@ -142,12 +142,11 @@ $ sudo apachectl restart
 ```
 
 * 設定を反映するためにApacheを再起動します。
+ * ApacheMonitorからの場合は「Start」をクリックします。
  * コマンドラインで操作する場合は以下のコマンドを実行します。
  ```text
     C:\Apache24\bin>httpd.exe -k restart
 ```
-
- * ApacheMonitorからの場合は「Start」をクリックします。
 
 * ApacheのDocumentRootフォルダ「C:\Apache24\htdocs」にphpinfo.phpというファイルを作成し、以下のように編集します。
  ```php
