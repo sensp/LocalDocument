@@ -69,7 +69,7 @@ $ sudo apachectl restart
 ```
 
 ##### Windowsの場合
-PHPとApacheをひとつずつインストールする方法です。
+下記はPHPとApacheをひとつずつインストールする方法です。
 
 １. PHPのダウンロードとインストール
 
@@ -80,22 +80,22 @@ PHPとApacheをひとつずつインストールする方法です。
 
 * 展開したフォルダを「php」にリネームし、Cドライブ直下（c:\php）に配置します。
 
-* phpフォルダの直下にある「php.ini-production」ファイルをコピーし、「php.ini」というファイル名で同じフォルダ（phpフォルダ）に配置します。php.iniを設定します。
+* phpフォルダの直下にある「php.ini-production」ファイルをコピーし、「php.ini」というファイル名で同じフォルダ（phpフォルダ）に配置します。php.iniを編集します。
  * 文字コードの設定 : default_charset = UTF-8
  * タイムゾーンの設定 : date.timezone=Asia/Tokyo
  * 日本語利用のためのマルチバイト設定 : mbstring.language = Japanese , mbstring.internal_encoding = UTF-8
- * OpenSSLが有効の設定(**重要**) : extension=php_openssl.dll (`;`を削除します）
+ * OpenSSLが有効の設定(**重要**) : extension=php_openssl.dll  (`;`を削除します）
 
 ２. PHPの設定と動作確認
 
 * 環境変数の設定
- * システム環境変数から変数「Path」を選択しシステム変数の編集です。変数値の末尾に「;C:\php」を追加し、「OK」をクリックします。
+ * システム環境変数から変数「Path」を選択し、変数値の末尾に「;C:\php」を追加し、「OK」をクリックします。
 
 * PHPの動作確認
  * コマンドプロンプトを起動し、オプション（-v）をつけて、phpのバージョンを確認します。
  ```text
 　　C:\>php -v
-            PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
+           PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
 ```
 
 ３. Apacheのダウンロードとインストール
