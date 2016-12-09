@@ -80,13 +80,13 @@ PHPとApacheをひとつずつインストールする方法です。
 
 * 展開したフォルダを「php」にリネームし、Cドライブ直下（c:\php）に配置します。
 
-* phpフォルダの直下にある「php.ini-production」ファイルをコピーし、「php.ini」というファイル名で同じフォルダ（phpフォルダ）に配置します。php.iniの設定は必要に応じて設定していきます。
+* phpフォルダの直下にある「php.ini-production」ファイルをコピーし、「php.ini」というファイル名で同じフォルダ（phpフォルダ）に配置します。php.iniを設定します。
  * 文字コードの設定 : default_charset = UTF-8
  * タイムゾーンの設定 : date.timezone=Asia/Tokyo
  * 日本語利用のためのマルチバイト設定 : mbstring.language = Japanese , mbstring.internal_encoding = UTF-8
  * OpenSSLが有効の設定(**重要**) : extension=php_openssl.dll (`;`を削除します）
 
-1. PHPの設定と動作確認
+2. PHPの設定と動作確認
 
 * 環境変数の設定
  * システム環境変数から変数「Path」を選択しシステム変数の編集です。変数値の末尾に「;C:\php」を追加し、「OK」をクリックします。
@@ -96,11 +96,9 @@ PHPとApacheをひとつずつインストールする方法です。
  ```text
 　　C:\>php -v
       PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
-　　  Copyright (c) 1997-2016 The PHP Group
-　　  Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
 ```
 
-1. Apacheのダウンロードとインストール
+3. Apacheのダウンロードとインストール
 
 * [Apacheの公式サイト](http://httpd.apache.org/)からダウンロードを行います。
 
@@ -109,7 +107,7 @@ PHPとApacheをひとつずつインストールする方法です。
 
 * 展開した中にあるフォルダ（Apache24）をローカルドライブのCドライブ直下に移動（またはコピー）します。
 
-* サーバ名とポート番号の設定していきます。(C:\Apache24\conf\httpd.conf)
+* サーバ名とポート番号を設定します。(C:\Apache24\conf\httpd.conf)
  * サーバ名 ホスト名:ポート番号(**重要**) : ServerName localhost:80
  * リクエストを受け付けるポート番号確認 : Listen 80
 
@@ -117,24 +115,22 @@ PHPとApacheをひとつずつインストールする方法です。
  ```text
 　　C:\>cd C:\Apache24\bin
 　　C:\Apache24\bin>httpd.exe -k install
-      Installing the 'Apache2.4' service
-      The 'Apache2.4' service is successfully installed.
-      Testing httpd.conf....
 ```
-1. Apacheの動作確認
+4. Apacheの動作確認
 
 * Apache24のbinフォルダ（C:\Apache24\bin）に移動し、「ApacheMonitor.exe」をダブルクリックします。
 
 * 赤い羽根の「ApacheMonitor」にマウスカーソルを合わせ右クリックし、「Open Apache Monitor」をクリックします。
 
-*「Apache Service Monitor」が起動するので、「Start」をクリックします。
+* 「Apache Service Monitor」が起動するので、「Start」をクリックします。
 
 * ブラウザを起動し、http://localhost/にアクセスします。
 
-*「It works!」というメッセージが表示されればOKです。(C:\Apache24\htdocs\index.htmlの内容を表示)
-  これでApacheの動作確認は完了です。
+* 「It works!」というメッセージが表示されればOKです。(C:\Apache24\htdocs\index.htmlの内容を表示)
 
-1. Apache + PHPの設定と動作確認
+* これでApacheの動作確認は完了です。
+
+5. Apache + PHPの設定と動作確認
 
 * Apacheのhttpd.conf設定する。
  * C:\Apache24\conf\httpd.confファイルの末尾に記述（追加）します。
