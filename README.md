@@ -29,7 +29,7 @@
 ##### Windows
 * Windows 7 Professional
 * Server version: Apache/2.4.23 (Window)
-* PHP v5.4以降 (今回は5.6.28)
+* PHP v5.4以降 (今回はv5.6.28)
 
 ### PHP環境準備について
 PHP環境及びPHP対応するサーバー(Apacheなど)を用意する必要がありますので、以下のいずれかを参考していただき、動作環境をご用意ください。
@@ -72,69 +72,88 @@ $ sudo apachectl restart
 PHPとApacheをひとつずつインストールする方法です。
 
 1. PHPのダウンロードとインストール
-*[PHPの公式ページ](http://php.net/)からダウンロードします。
-*上部メニューの「Downloads」をクリック -> 安定版（Current stable）であるPHP 5.6.28の「Windows downloads」をクリック ->
+
+* [PHPの公式ページ](http://php.net/)からダウンロードします。
+
+* 上部メニューの「Downloads」をクリック -> 安定版（Current stable）であるPHP 5.6.28の「Windows downloads」をクリック ->
   VC11 x64 Thread Safe (2016-Nov-09 18:10:04)から「Zip」をクリック -> ダウンロードしたZIPファイル（php-5.6.28-Win32-VC11-x64.zip）を展開します。
-*展開したフォルダを「php」にリネームし、Cドライブ直下（c:\php）に配置します。
-*phpフォルダの直下にある「php.ini-production」ファイルをコピーし、「php.ini」というファイル名で同じフォルダ（phpフォルダ）に配置します。
+
+* 展開したフォルダを「php」にリネームし、Cドライブ直下（c:\php）に配置します。
+
+* phpフォルダの直下にある「php.ini-production」ファイルをコピーし、「php.ini」というファイル名で同じフォルダ（phpフォルダ）に配置します。
  * php.iniの設定は必要に応じて設定していきます。
  * 1)文字コードの設定 : default_charset = UTF-8
  * 2)タイムゾーンの設定 : date.timezone=Asia/Tokyo
  * 3)日本語利用のためのマルチバイト設定 : mbstring.language = Japanese , mbstring.internal_encoding = UTF-8
  * 4)OpenSSLが有効の設定(**重要**) : extension=php_openssl.dll(`;`を削除します）
 
-2. PHPの設定と動作確認
-*環境変数の設定
+1. PHPの設定と動作確認
+
+* 環境変数の設定
  * システム環境変数から変数「Path」を選択しシステム変数の編集です。変数値の末尾に「;C:\php」を追加し、「OK」をクリックします。
-*PHPの動作確認
+
+* PHPの動作確認
  * コマンドプロンプトを起動し、オプション（-v）をつけて、phpのバージョンを確認します。
  ```dos
 　　C:\>php -v
-　　PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
-　　Copyright (c) 1997-2016 The PHP Group
-　　Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
+      PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
+　　  Copyright (c) 1997-2016 The PHP Group
+　　  Zend Engine v2.6.0, Copyright (c) 1998-2016 Zend Technologies
 ```
 
-3. Apacheのダウンロードとインストール
-*[Apacheの公式サイト](http://httpd.apache.org/)からダウンロード行います。
+1. Apacheのダウンロードとインストール
+
+* [Apacheの公式サイト](http://httpd.apache.org/)からダウンロード行います。
+
 *「Apache httpd 2.4.23 Released」のブロックにある「Download」をクリック ->「Files for Microsoft Windows」リンクをクリック ->
  「Apache Lounge」リンクをクリック -> Apache 2.4.23 Win64 -> httpd-2.4.23-win64-VC14.zip をクリックしてダウンロードします。
-*展開した中にあるフォルダ（Apache24）をローカルドライブのCドライブ直下に移動（またはコピー）します。
-*サーバ名とポート番号の設定していきます。(C:\Apache24\conf\httpd.conf)
+
+* 展開した中にあるフォルダ（Apache24）をローカルドライブのCドライブ直下に移動（またはコピー）します。
+
+* サーバ名とポート番号の設定していきます。(C:\Apache24\conf\httpd.conf)
  * サーバ名 ホスト名[:ポート番号](**重要**) : ServerName localhost:80
  * リクエストを受け付けるポート番号確認 : Listen 80
-*実行ファイル（httpd.exe）を実行し、Apache24をサービスへインストールします。
+
+* 実行ファイル（httpd.exe）を実行し、Apache24をサービスへインストールします。
  ```dos
 　　C:\>cd C:\Apache24\bin
 　　C:\Apache24\bin>httpd.exe -k install
-    Installing the 'Apache2.4' service
-    The 'Apache2.4' service is successfully installed.
-    Testing httpd.conf....
+      Installing the 'Apache2.4' service
+      The 'Apache2.4' service is successfully installed.
+      Testing httpd.conf....
 ```
-4. Apacheの動作確認
-*Apache24のbinフォルダ（C:\Apache24\bin）に移動し、「ApacheMonitor.exe」をダブルクリックします。
-*赤い羽根の「ApacheMonitor」にマウスカーソルを合わせ右クリックし、「Open Apache Monitor」をクリックします。
+1. Apacheの動作確認
+
+* Apache24のbinフォルダ（C:\Apache24\bin）に移動し、「ApacheMonitor.exe」をダブルクリックします。
+
+* 赤い羽根の「ApacheMonitor」にマウスカーソルを合わせ右クリックし、「Open Apache Monitor」をクリックします。
+
 *「Apache Service Monitor」が起動するので、「Start」をクリックします。
-*ブラウザを起動し、http://localhost/にアクセスします。
+
+* ブラウザを起動し、http://localhost/にアクセスします。
+
 *「It works!」というメッセージが表示されればOKです。(C:\Apache24\htdocs\index.htmlの内容を表示)
   これでApacheの動作確認は完了です。
 
-5. Apache + PHPの設定と動作確認
+1. Apache + PHPの設定と動作確認
+
 * Apacheのhttpd.conf設定する。
  * C:\Apache24\conf\httpd.confファイルの末尾に記述（追加）します。
- ```dos
+ ```text
     LoadModule php5_module "C:/php/php5apache2_4.dll"
     PHPIniDir "C:/php"
     AddType application/x-httpd-php .php
 ```
-*設定を反映するためにApacheを再起動します。
+
+* 設定を反映するためにApacheを再起動します。
  * コマンドラインで操作する場合は以下のコマンドを実行します。
  ```dos
     C:\Apache24\bin>httpd.exe -k restart
 ```
+
  * ApacheMonitorからは「Start」をクリックします。
 
-*ApacheのDocumentRootフォルダ「C:\Apache24\htdocs」にphpinfo.phpというファイルを作成し、以下のように編集します。
+* ApacheのDocumentRootフォルダ「C:\Apache24\htdocs」にphpinfo.phpというファイルを作成し、以下のように編集します。
  ```php
     <?php phpinfo(); ?>
 ```
