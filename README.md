@@ -24,7 +24,8 @@
 * Server version: Apache/2.4.23 (Unix)
 * PHP v5.4以降
  * httpsへ通信が必要のため、https通信ができるよう環境をご用意ください。
- * v5.6.x の場合、SSL証明書が検証されますので、正しい証明書をご利用ください。(参考：http://php.net/manual/ja/migration56.openssl.php)
+ * v5.6.x の場合、SSL証明書が検証されますので、正しい証明書をご利用ください。
+   (参考：http://php.net/manual/ja/migration56.openssl.php)
 
 ##### Windows
 * Windows 7 Professional
@@ -77,7 +78,7 @@ $ sudo apachectl restart
 * [PHPの公式ページ](http://php.net/)からダウンロードします。
 
 * 上部メニューの「Downloads」をクリック -> 安定版（Current stable）であるPHP 5.6.28の「Windows downloads」をクリック ->
-  VC11 x64 Thread Safe (2016-Nov-09 18:10:04)から「Zip」をクリック -> ダウンロードしたZIPファイル（`php-5.6.28-Win32-VC11-x64.zip`）を展開します。
+  VC11 x64 Thread Safe (2016-Nov-09 18:10:04)から「Zip」をクリック -> ダウンロードしたZIPファイル（php-5.6.28-Win32-VC11-x64.zip）を展開します。
 
 * 展開したフォルダを「php」にリネームし、Cドライブ直下（c:\php）に配置します。
 
@@ -104,7 +105,7 @@ $ sudo apachectl restart
 * [Apacheの公式サイト](http://httpd.apache.org/)からダウンロードします。
 
 * 「Apache httpd 2.4.23 Released」のブロックにある「Download」をクリック ->「Files for Microsoft Windows」リンクをクリック ->
-  「Apache Lounge」リンクをクリック -> Apache 2.4.23 Win64の`httpd-2.4.23-win64-VC14.zip`をクリックしてダウンロードします。
+  「Apache Lounge」リンクをクリック -> Apache 2.4.23 Win64の httpd-2.4.23-win64-VC14.zipをクリックしてダウンロードします。
 
 * 展開した中にあるフォルダ（Apache24）をローカルドライブのCドライブ直下に移動（またはコピー）します。
 
@@ -143,7 +144,6 @@ $ sudo apachectl restart
 
 * 設定を反映するためにApacheを再起動します。
  * ApacheMonitorからの場合は「Start」をクリックします。
-
  * コマンドラインで操作する場合は以下のコマンドを実行します。
  ```text
     C:\Apache24\bin>httpd.exe -k restart
