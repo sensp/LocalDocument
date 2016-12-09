@@ -71,8 +71,7 @@ $ sudo apachectl restart
 ##### Windowsの場合
 下記はPHPとApacheをひとつずつインストールする方法です。
 
-
-1. PHPのダウンロードとインストール
+ 1. PHPのダウンロードとインストール
 
 * [PHPの公式ページ](http://php.net/)からダウンロードします。
 
@@ -87,8 +86,7 @@ $ sudo apachectl restart
  * 日本語利用のためのマルチバイト設定 : mbstring.language = Japanese , mbstring.internal_encoding = UTF-8
  * OpenSSLが有効の設定(**重要**) : extension=php_openssl.dll  (`;`を削除します）
 
-
-1. PHPの設定と動作確認
+ 1. PHPの設定と動作確認
 
 * 環境変数の設定
  * システム環境変数から変数「Path」を選択し、変数値の末尾に「;C:\php」を追加し、「OK」をクリックします。
@@ -100,8 +98,7 @@ $ sudo apachectl restart
            PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
 ```
 
-
-1. Apacheのダウンロードとインストール
+ 1. Apacheのダウンロードとインストール
 
 * [Apacheの公式サイト](http://httpd.apache.org/)からダウンロードを行います。
 
@@ -119,8 +116,7 @@ $ sudo apachectl restart
 　　C:\Apache24\bin>httpd.exe -k install
 ```
 
-
-1. Apacheの動作確認
+ 1. Apacheの動作確認
 
 * Apache24のbinフォルダ（C:\Apache24\bin）に移動し、「ApacheMonitor.exe」をダブルクリックします。
 
@@ -134,8 +130,7 @@ $ sudo apachectl restart
 
 * これでApacheの動作確認は完了です。
 
-
-1. Apache + PHPの設定と動作確認
+ 1. Apache + PHPの設定と動作確認
 
 * Apacheのhttpd.conf設定する。
  * C:\Apache24\conf\httpd.confファイルの末尾に記述（追加）します。
