@@ -80,12 +80,11 @@ PHPとApacheをひとつずつインストールする方法です。
 
 * 展開したフォルダを「php」にリネームし、Cドライブ直下（c:\php）に配置します。
 
-* phpフォルダの直下にある「php.ini-production」ファイルをコピーし、「php.ini」というファイル名で同じフォルダ（phpフォルダ）に配置します。
- * php.iniの設定は必要に応じて設定していきます。
- * 1)文字コードの設定 : default_charset = UTF-8
- * 2)タイムゾーンの設定 : date.timezone=Asia/Tokyo
- * 3)日本語利用のためのマルチバイト設定 : mbstring.language = Japanese , mbstring.internal_encoding = UTF-8
- * 4)OpenSSLが有効の設定(**重要**) : extension=php_openssl.dll(`;`を削除します）
+* phpフォルダの直下にある「php.ini-production」ファイルをコピーし、「php.ini」というファイル名で同じフォルダ（phpフォルダ）に配置します。php.iniの設定は必要に応じて設定していきます。
+ * 文字コードの設定 : default_charset = UTF-8
+ * タイムゾーンの設定 : date.timezone=Asia/Tokyo
+ * 日本語利用のためのマルチバイト設定 : mbstring.language = Japanese , mbstring.internal_encoding = UTF-8
+ * OpenSSLが有効の設定(**重要**) : extension=php_openssl.dll (`;`を削除します）
 
 1. PHPの設定と動作確認
 
@@ -94,7 +93,7 @@ PHPとApacheをひとつずつインストールする方法です。
 
 * PHPの動作確認
  * コマンドプロンプトを起動し、オプション（-v）をつけて、phpのバージョンを確認します。
- ```dos
+ ```text
 　　C:\>php -v
       PHP 5.6.28 (cli) (built: Nov  9 2016 06:40:27)
 　　  Copyright (c) 1997-2016 The PHP Group
@@ -103,19 +102,19 @@ PHPとApacheをひとつずつインストールする方法です。
 
 1. Apacheのダウンロードとインストール
 
-* [Apacheの公式サイト](http://httpd.apache.org/)からダウンロード行います。
+* [Apacheの公式サイト](http://httpd.apache.org/)からダウンロードを行います。
 
-*「Apache httpd 2.4.23 Released」のブロックにある「Download」をクリック ->「Files for Microsoft Windows」リンクをクリック ->
- 「Apache Lounge」リンクをクリック -> Apache 2.4.23 Win64 -> httpd-2.4.23-win64-VC14.zip をクリックしてダウンロードします。
+* 「Apache httpd 2.4.23 Released」のブロックにある「Download」をクリック ->「Files for Microsoft Windows」リンクをクリック ->
+  「Apache Lounge」リンクをクリック -> Apache 2.4.23 Win64 -> httpd-2.4.23-win64-VC14.zip をクリックしてダウンロードします。
 
 * 展開した中にあるフォルダ（Apache24）をローカルドライブのCドライブ直下に移動（またはコピー）します。
 
 * サーバ名とポート番号の設定していきます。(C:\Apache24\conf\httpd.conf)
- * サーバ名 ホスト名[:ポート番号](**重要**) : ServerName localhost:80
+ * サーバ名 ホスト名:ポート番号(**重要**) : ServerName localhost:80
  * リクエストを受け付けるポート番号確認 : Listen 80
 
 * 実行ファイル（httpd.exe）を実行し、Apache24をサービスへインストールします。
- ```dos
+ ```text
 　　C:\>cd C:\Apache24\bin
 　　C:\Apache24\bin>httpd.exe -k install
       Installing the 'Apache2.4' service
@@ -147,7 +146,7 @@ PHPとApacheをひとつずつインストールする方法です。
 
 * 設定を反映するためにApacheを再起動します。
  * コマンドラインで操作する場合は以下のコマンドを実行します。
- ```dos
+ ```text
     C:\Apache24\bin>httpd.exe -k restart
 ```
 
@@ -184,6 +183,13 @@ PHPとApacheをひとつずつインストールする方法です。
 > デフォルト設定の場合、Apacheのホームディレクトリは以下にあります。
 > ```text
 DocumentRoot "/Library/WebServer/Documents"
+```
+
+> 参考：Windowの場合
+
+> Apacheの指定ホームディレクトリは以下にあります。
+> ```text
+DocumentRoot "C:\Apache24\htdocs"
 ```
 
 ### 2. [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の会員登録/ログインとアプリ作成
