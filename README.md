@@ -103,7 +103,7 @@ $ sudo apachectl restart
 * [Apacheの公式サイト](http://httpd.apache.org/)からダウンロードします。
 
 * 「Apache httpd 2.4.23 Released」のブロックにある「Download」をクリック ->「Files for Microsoft Windows」リンクをクリック ->
-  「Apache Lounge」リンクをクリック -> Apache 2.4.23 Win64 -> httpd-2.4.23-win64-VC14.zip をクリックしてダウンロードします。
+  「Apache Lounge」リンクをクリック -> Apache 2.4.23 Win64にある httpd-2.4.23-win64-VC14.zipをクリックしてダウンロードします。
 
 * 展開した中にあるフォルダ（Apache24）をローカルドライブのCドライブ直下に移動（またはコピー）します。
 
