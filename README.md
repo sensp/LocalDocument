@@ -29,7 +29,8 @@
 ##### Windows
 * Windows 7 Professional
 * Server version: Apache/2.4.23 (Window)
-* PHP v5.4以降 (今回はv5.6.28)
+* PHP v5.4以降
+ * 今回はv5.6.28を利用しました。
 
 ### PHP環境準備について
 PHP環境及びPHP対応するサーバー(Apacheなど)を用意する必要がありますので、以下のいずれかを参考していただき、動作環境をご用意ください。
